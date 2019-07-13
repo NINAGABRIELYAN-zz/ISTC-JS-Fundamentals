@@ -1,19 +1,20 @@
 <script>
-//     function amount_to_coins(money, coins){
-//         var count = [];
-//     for (i of coins){
-//         var value = Math.floor(money/i)
-//         money = money % i
-//     if (value > 0){
-//         while (value > 0){
-//             count.push(i)
-//             value -= 1
-//         }
+// version 1
+    function amount_to_coins(money, coins){
+        var count = [];
+    for (i of coins){
+        var value = Math.floor(money/i)
+        money = money % i
+    if (value > 0){
+        while (value > 0){
+            count.push(i)
+            value -= 1
+        }
         
-//     }
-// }return count
-//     }console.log(amount_to_coins(48, [20, 10, 5, 2, 1]))
-
+    }
+}return count
+    }console.log(amount_to_coins(48, [20, 10, 5, 2, 1]))
+// version 2
     function amount_to_coins(money, coins){
         var count = [];
     for (i of coins){
