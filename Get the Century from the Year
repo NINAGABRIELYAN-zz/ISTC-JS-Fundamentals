@@ -1,0 +1,10 @@
+<script>
+function year (x){
+    if (x <=100){
+        console.log(1)
+    }else{
+ console.log (x = Math.floor(x/100+1))
+    }
+}
+year(1475)
+</script>
