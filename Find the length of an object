@@ -1,0 +1,9 @@
+<script>
+ var musician1 = {
+     name: "Robert",
+     surname: "Plant",
+     yearsActive: 2019,
+     dead: false
+ }
+ console.log(Object.keys(musician1).length)
+ </script>
