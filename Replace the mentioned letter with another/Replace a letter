@@ -1,0 +1,9 @@
+<script>
+var x = "xabca";
+for (i=0; i<x.length; i++){
+    if (x[i] == "a"){
+       x=x.replace("a", "A")
+    }
+}    
+console.log(x)
+</script>
