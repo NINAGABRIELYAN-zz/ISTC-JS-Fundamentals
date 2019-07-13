@@ -1,0 +1,11 @@
+<script>
+var x= "aylulaya";
+var y = " ";
+for (i= 0; i< x.length; i++){
+   if (x[i] == "a"){
+    y += "A";
+   } else {
+     y+= x[i]  
+   }
+} console.log (y)
+</script>
