@@ -1,0 +1,13 @@
+<script>
+function my_vouel(x){
+var vouel = "aouieAOUIE"
+var numberOfVouels = ""
+for (i = 0; i<x.length; i++){
+    if (vouel.indexOf(x[i]) !== -1){
+        numberOfVouels+=x[i]
+    }
+}
+return numberOfVouels
+}
+console.log(my_vouel("My red is bigger than yours"))
+</script>
