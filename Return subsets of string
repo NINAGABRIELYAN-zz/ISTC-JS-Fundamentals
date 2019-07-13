@@ -1,0 +1,7 @@
+<script>
+var str = "dog"
+for (i = 0; i<str.length; i++){
+	for (j = i; j<=str.length; j++)
+	console.log(str.substring(i, j))
+	}
+  </script>
