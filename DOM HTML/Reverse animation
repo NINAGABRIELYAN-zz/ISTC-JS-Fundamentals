@@ -2,7 +2,7 @@
   <html> 
   <head>
   <title>JavaScript basic animation</title>
-  <script type="text/javascript">
+  <script>
   function animate_string(id) 
 {
     var element = document.getElementById(id);
@@ -17,23 +17,6 @@ setInterval(function ()
 }
   </script>
   </head> <body onload="animate_string('target')"
-  <pre id="target">barev_PUJUR </pre>
+  <pre id="target">Hello, my little rebel! </pre>
   </body> 
   </html>
-<script>
-// function number_reverse(x){
-//     x = x.toString();
-//     return x.reverse();
-
-// }
-// console.log(number_reverse(123456))
-// function reverseString(string) {
-//     var reversedString = "";
-//     var stringLength = string.length - 1;
-//     for (var i = stringLength; i >= 0; i--) {
-//         reversedString += string[i];
-//     }
-//     return reversedString;
-// }console.log(reverseString("Hello"))
-
-</script>
