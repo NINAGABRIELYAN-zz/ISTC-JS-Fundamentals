@@ -18,7 +18,7 @@ arr.map(myFunction);
 
 function changeColor(){
         var graph = document.getElementsByTagName("h1");
-        graph[1].innerHTML = "Nina, gna gorci";
+        graph[1].innerHTML = "Keep calm and keep on coding";
         graph[1].style.color = "grey";
     }
 //     var div = document.getElementById("1")
@@ -70,7 +70,7 @@ function changeColor(){
 // function myFunc(item, index){
 //     y +=item +" ";
 //     return y
-// }console.log(y) -->
+// }console.log(y)
 </script>
 </body>
 </html>
