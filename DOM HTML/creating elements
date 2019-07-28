@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bazukik</title>
+</head>
+
+<body>
+  <div id="justTesting">
+    <button onclick="changeTheText()">Change the text</button>
+    <button onclick="changeColor()">Change the Color</button>
+  </div>
+  <script>
+    function changeTheText() {
+      var div = document.getElementById("justTesting")
+      var x = document.createElement("p")
+      x.innerHTML = "բողկիկ";
+      x.style.fontSize = "40px";
+      return div.appendChild(x)
+    }
+    document.write()
+    function changeColor() {
+      var arr = document.getElementsByTagName("p")
+      for (var y = 0; y < arr.length; y++) {
+        arr[y].style.color = "red"
+        arr[y].style.fontFamily = "Sylfaen"
+      }
+    } document.write()
+  </script>
+</body>
+
+</html>
