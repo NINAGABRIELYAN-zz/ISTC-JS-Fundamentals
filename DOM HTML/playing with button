@@ -3,7 +3,7 @@
 <body>
 
     <p id="1" onmouseover="changeTextofP()" onmouseout="changeTextofP1()">Hello World!</p>
-    <p id="2">Inch a asum e!</p>
+    <p id="2">What's up there?</p>
 
     <script>
         txt=document.getElementById("1").innerHTML;
@@ -11,7 +11,7 @@
         txt=document.getElementById("intro").childNodes[0].nodeValue;
 
         document.write("The text from the intro paragraph: " + txt + " " + txt2);
-        txt=document.getElementsByTagName("p").childNodes[0].nodeValue; // Chhaskaca! ! !
+        txt=document.getElementsByTagName("p").childNodes[0].nodeValue;
         document.write("The text from the intro paragraph: " + txt);
         var x = document.getElementsByTagName("p");
         document.write("First paragraph text: " + x[0].innerHTML)
@@ -26,7 +26,7 @@
             document.write("</br>")
         }
         var x = document.getElementById("2");
-        document.write(x.lastChild.nodeValue); // nuynn a, inch vor x.innerHTML?
+        document.write(x.lastChild.nodeValue);
         x = document.body;
         y = document.documentElement;
         document.write(x + " " + y)
