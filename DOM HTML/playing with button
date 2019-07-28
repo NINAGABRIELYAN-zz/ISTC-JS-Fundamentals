@@ -1,0 +1,57 @@
+<html>
+
+<body>
+
+    <p id="1" onmouseover="changeTextofP()" onmouseout="changeTextofP1()">Hello World!</p>
+    <p id="2">Inch a asum e!</p>
+
+    <script>
+        txt=document.getElementById("1").innerHTML;
+        txt2 = document.getElementById("2").innerHTML;
+        txt=document.getElementById("intro").childNodes[0].nodeValue;
+
+        document.write("The text from the intro paragraph: " + txt + " " + txt2);
+        txt=document.getElementsByTagName("p").childNodes[0].nodeValue; // Chhaskaca! ! !
+        document.write("The text from the intro paragraph: " + txt);
+        var x = document.getElementsByTagName("p");
+        document.write("First paragraph text: " + x[0].innerHTML)
+        var x = document.getElementsByTagName("p");
+        for (i=0;i<x.length;i++){
+            x[i].childNodes[0].nodeValue = "Go to HELL"
+          }
+        console.log(x);
+        var x = document.getElementsByTagName("p")
+        for (i = 0; i< x.length; i++){
+            document.write(x[i].innerHTML)
+            document.write("</br>")
+        }
+        var x = document.getElementById("2");
+        document.write(x.lastChild.nodeValue); // nuynn a, inch vor x.innerHTML?
+        x = document.body;
+        y = document.documentElement;
+        document.write(x + " " + y)
+        var x = document.getElementById("1").firstChild;
+        document.write(x.nodeType)
+        document.body.bgColor = "grey"
+        function changeText(){
+            document.getElementById("2").style.fontSize = "50px", document.getElementById("2").innerHTML = "Go to Hell!"
+        }
+        function changeTextofP(){
+            var x = document.getElementById("1");
+            x.innerHTML = "Hey, you!";
+            x.style.fontSize = "40px";
+            x.style.color = "orange"
+        }
+        function changeTextofP1(){
+            var y = document.getElementById("1")
+            y.innerHTML = "Hello, Nina";
+            y.fontSize = "80px";
+            y.style.color = "red"
+        }
+        </script>
+<button onclick="document.body.bgColor='grey';">Click me</button>
+<button onclick = "changeText()">change the text</button>
+
+</body>
+
+</html>
