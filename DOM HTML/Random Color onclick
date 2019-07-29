@@ -17,7 +17,7 @@
             var green = Math.floor(Math.random() * 256);
             var bg = "rgb(" + red + "," + blue + "," + green +")";
             var element = document.getElementsByTagName("p");
-            element[0].style.background = bg;
+            element[0].style.color = bg;
             element[1].style.background = bg;
             }
     </script>
