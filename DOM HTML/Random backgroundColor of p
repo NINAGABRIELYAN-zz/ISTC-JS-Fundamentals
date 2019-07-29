@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "set_background()">Click on me to change the backgroung</button>
+    <p style = "font-size: 40px">JS for dummies</p>
+    <p style = "font-size: 40px">HTML for dummies</p>
+    <script>
+        function set_background(){
+            var red = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var bg = "rgb(" + red + "," + blue + "," + green +")";
+            var element = document.getElementsByTagName("p");
+            element[0].style.background = bg;
+            element[1].style.background = bg;
+            }
+    </script>
+</body>
+</html>
