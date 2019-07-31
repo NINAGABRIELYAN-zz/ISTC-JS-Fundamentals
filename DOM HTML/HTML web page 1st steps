@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header {
+            display: block;
+            width: 100%;
+            height: 80px;
+            float: center;
+            background-color: rgba(108, 192, 38, 0.233);
+            color: rgb(24, 2, 46);
+            text-align: center;
+            font-family: 'Times New Roman';
+            font-size: 60px
+        }
+
+        section#myNewDummiePlay {
+            width: 100%
+        }
+
+        section#myNewDummiePlay article {
+            width: 60%;
+            height: 484px;
+            float: left;
+            background-color: rgba(120, 214, 65, 0.466);
+            color: rgb(33, 66, 6);
+            text-align: left;
+            font-family: 'Gill Sans';
+            font-style: bold;
+            font-size: 40px
+        }
+
+        section#myNewDummiePlay aside {
+            margin: 0%;
+            width: 40%;
+            height: 484px;
+            float: right;
+            background-color: rgba(159, 223, 201, 0.288);
+            text-align: right;
+            font-family: 'Gill Sans';
+            font-style: italic;
+            font-size: 40px
+        }
+
+        section#myNewDummiePlay img {
+            height: 80%;
+            width: 80%;
+            float: center;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Save our planet</header>
+    <section id="myNewDummiePlay">
+        <article>
+            <p style="text-align: center; color: seagreen"><strong>Most important things to do</strong></p>
+            <ul>
+                <li>Reduce, reuse, and recycle</li>
+                <li>Educate</li>
+                <li>Conserve water</li>
+                <li>Plant a tree</li>
+                <li>Bike more. Drive less.</li>
+                <li>Shop wisely.</li>
+                <li>Choose non-toxic chemicals</li>
+            </ul>
+        </article>
+        <aside>
+            <h1><img src="https://img.etimg.com/thumb/msid-68965721,width-643,imgsize-673232,resizemode-4/worldearthday.jpg"
+                    alt="ISTC logo"></h1>
+                <p><a href="https://youtu.be/BWf-eARnf6U" target="_blank">Heal the World</a></p>
+        </aside>
+    </section>
+</body>
+
+</html>
