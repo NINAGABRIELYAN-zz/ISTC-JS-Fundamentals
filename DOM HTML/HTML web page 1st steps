@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,63 +17,80 @@
             color: rgb(24, 2, 46);
             text-align: center;
             font-family: 'Times New Roman';
-            font-size: 20px;
+            font-size: 2vw;
             padding-top: 1px
         }
 
-        article {
-            width: 40%;
-            height: 300px;
+        section#myNewDummiePlay {
+            width: 100%
+        }
+        section#myNewDummiePlay article {
+            display: inline-block;
+            width: 60%;
+            height: 484px;
             float: left;
             background-color: rgba(120, 214, 65, 0.466);
             color: rgb(33, 66, 6);
-            text-align: center;
+            text-align: left;
             font-family: 'Gill Sans';
             font-style: bold;
-            font-size: 40px
+            font-size: 2vw;
         }
 
-        aside {
+         aside {
             margin: 0%;
-            width: 30%;
-            height: 300px;
+            width: 40%;
+            height: 484px;
             float: right;
             background-color: rgba(159, 223, 201, 0.288);
             text-align: center;
             font-family: 'Gill Sans';
             font-style: italic;
-            font-size: 40px
+            font-size: 2vw;
         }
 
-        footer {
+        section#myNewDummiePlay img {
             margin: 0%;
-            display: inline-block;
-            width: 100%;
-            height: 60px;
-            float: center;
-            background-color: rgba(126, 75, 9, 0.288);
-            text-align: center;
-            font-family: 'Gill Sans';
-            font-style: italic;
-            font-size: 20px
+            width: 40%;
+            height: 40%;
+            float: right;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>This is my Header</h1>
-    </header>
-    <article>
-        <p>You Rock!</p>
-    </article>
-    <aside>
-        <p>My aside!</p>
-    </aside>
-    <aside>
-        <p>My aside!</p>
-    </aside>
-    <footer>
-        <p>Contact US</p>
-    </footer>
+    <header>Save our planet</header>
+    <section id="myNewDummiePlay">
+        <article>
+            <p style="text-align: center; color: seagreen"><strong>Most important things to do</strong></p>
+            <ul>
+                <li>Reduce, reuse, and recycle</li>
+                <li>Educate</li>
+                <li>Conserve water</li>
+                <li>Plant a tree</li>
+                <li>Bike more. Drive less.</li>
+                <li>Shop wisely.</li>
+                <li>Choose non-toxic chemicals</li>
+            </ul>
+        </article>
+        <aside>
+            <h1><img src="https://img.etimg.com/thumb/msid-68965721,width-643,imgsize-673232,resizemode-4/worldearthday.jpg"
+                    alt="Heal the World"></h1>
+                <p><a href="https://youtu.be/BWf-eARnf6U" target="_blank">Heal the World</a></p>
+        </aside>
+    </section>
 </body>
+
 </html>
