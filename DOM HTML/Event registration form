@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event registration form</title>
+    <style>
+        body {
+            margin: 0%;
+            width: 100%;
+            height: 100%;
+            background-image: url("http://static.hdw.eweb4.com/media/wallpapers_1920x1080/photography/1/4/wine-glasses-photography-hd-wallpaper-1920x1080-39505.jpg");
+            background-color: black;
+            background-repeat: no-repeat;
+            max-height: 100%;
+            max-width: 100%;
+            background-attachment: scroll
+        }
+        h1 {
+            margin-left: 2.5%;
+            margin-bottom: 0%;
+            padding-top: 0.5vw;
+            padding-bottom: 0.25vw;
+            text-align: left;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-transform: uppercase;
+            color: whitesmoke;
+            text-shadow: 4px 4px rgb(80, 5, 5)
+        }
+        fieldset.event {
+            margin: 2vw;
+            width: 40%;
+            height: auto;
+            display: border-box;
+            position: absolute;
+            background-color: rgba(226, 186, 186, 0.226);
+            border: 2px solid;
+            border-radius: 5px;
+            border-color: rgba(158, 113, 113, 0.507);
+        }
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 2.5vw;
+            margin-bottom: 1.25vw;
+            cursor: pointer;
+            font-size: 1.5vw;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: whitesmoke;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: whitesmoke;
+            border-radius: 50%;
+        }
+        .container:hover input~.checkmark {
+            background-color: silver;
+        }
+        .container input:checked~.checkmark {
+            background-color:rgb(53, 7, 7);
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+        .container .checkmark:after {
+            top: 0.4vw;
+            left: 0.4vw;
+            width: 0.6vw;
+            height: 0.6vw;
+            border-radius: 50%;
+            background: rgb(112, 25, 25);
+        }
+
+        /* .favicon::after{
+            content: "*"
+        } */
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5vw;
+            color: whitesmoke;
+            text-align: justify;
+        }
+
+        input {
+            width: 22vw;
+            line-height: 2vw;
+            float: right;
+            background-color: transparent;
+            border-color: rgba(245, 245, 245, 0.199);
+            border-radius: 5px;
+            color: whitesmoke
+        }
+        input:focus {
+            outline-color: silver;
+        }
+        ::placeholder{
+            color: whitesmoke;
+        }
+        input[type=submit]{
+            background-color:  rgba(104, 7, 7, 0.863);
+            box-shadow: 14px -6px 23px 2px #1c0306, 14px -6px 23px 2px #1c0306;
+            border-color: rgba(245, 245, 245, 0.199);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        event registration form
+    </h1>
+    <section>
+        <div id="container_my">
+            <fieldset class="event">
+                <form action="mysuperscript.php" autocomplete="on">
+                    <p>
+                        <label for="username" class="uname" data-icon="u"> Your name </label>
+                        <!-- <span></span>
+                <span class = "favicon"></span> -->
+                        <input id="username" name="username" required="required" type="text" placeholder="Your name" />
+                    </p>
+                    <p>
+                        <label for="username" class="uname" data-icon="u"> Your e-mail </label>
+                        <input id="username" name="username" required="required" type="text" placeholder="Your e-mail" />
+                    </p>
+                    <p>
+                        <label for="username" class="uname" data-icon="u"> Phone number </label>
+                        <input id="username" name="username" required="required" type="text" placeholder="Phone number" />
+                    </p>
+                    <p>
+                        <label for="username" class="uname" data-icon="u"> Number of persons</label>
+                        <input id="username" name="username" required="required" type="text" placeholder="Number of persons" />
+                    </p>
+                    <p>
+                        <label for="username" class="uname" data-icon="u">Date and Time</label>
+                        <input type="datetime-local" name="daytime">
+                    </p>
+                    <p>Please choose your favorite food</p>
+                    <label class="container"> Vegan
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container"> No vegan
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Please choose your favorite drink</p>
+                    <label class="container"> No alcohol
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container"> Wine
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container"> Beer
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container"> Whiskey
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="submit" value="Submit">
+                </form>
+            </fieldset>
+        </div>
+    </section>
+</body>
+
+</html>
