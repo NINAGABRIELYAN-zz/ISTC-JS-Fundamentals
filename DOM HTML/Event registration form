@@ -7,19 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event registration form</title>
     <style>
-        body {
+        body, html {
             margin: 0%;
             width: 100%;
             height: 100%;
-            background-image: url("http://static.hdw.eweb4.com/media/wallpapers_1920x1080/photography/1/4/wine-glasses-photography-hd-wallpaper-1920x1080-39505.jpg");
+            overflow: hidden;
+            /* background-image: url("http://static.hdw.eweb4.com/media/wallpapers_1920x1080/photography/1/4/wine-glasses-photography-hd-wallpaper-1920x1080-39505.jpg");*/
             background-color: black;
-            background-repeat: no-repeat;
+            /* background-repeat: no-repeat;
+            background-size: cover;
             max-height: 100%;
-            max-width: 100%;
-            background-attachment: scroll
+            max-width: 100%; */
         }
         h1 {
-            margin-left: 2.5%;
+            margin-left: 35vw;
             margin-bottom: 0%;
             padding-top: 0.5vw;
             padding-bottom: 0.25vw;
@@ -30,8 +31,9 @@
             text-shadow: 4px 4px rgb(80, 5, 5)
         }
         fieldset.event {
-            margin: 2vw;
+            margin: 30vw;
             width: 40%;
+            margin-top: 1.5vw;
             height: auto;
             display: border-box;
             position: absolute;
@@ -88,10 +90,59 @@
             width: 0.6vw;
             height: 0.6vw;
             border-radius: 50%;
-            background: rgb(112, 25, 25);
+            background:rgb(53, 7, 7);
         }
-
-        /* .favicon::after{
+        .container1 {
+            display: block;
+            position: relative;
+            padding-left: 2.5vw;
+            margin-bottom: 1.25vw;
+            cursor: pointer;
+            font-size: 1vw;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: whitesmoke;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container1 input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: whitesmoke;
+            border-radius: 50%;
+        }
+        .container1:hover input~.checkmark1 {
+            background-color: silver;
+        }
+        .container1 input:checked~.checkmark1 {
+            background-color:rgb(53, 7, 7);
+        }
+        .checkmark1:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .container1 input:checked~.checkmark1:after {
+            display: block;
+        }
+        .container1 .checkmark1:after {
+            top: 0.4vw;
+            left: 0.4vw;
+            width: 0.6vw;
+            height: 0.6vw;
+            border-radius: 50%;
+            background:rgb(53, 7, 7);
+        }
+        /* .favicon::before{
             content: "*"
         } */
         p {
@@ -100,7 +151,6 @@
             color: whitesmoke;
             text-align: justify;
         }
-
         input {
             width: 22vw;
             line-height: 2vw;
@@ -118,7 +168,7 @@
         }
         input[type=submit]{
             background-color:  rgba(104, 7, 7, 0.863);
-            box-shadow: 14px -6px 23px 2px #1c0306, 14px -6px 23px 2px #1c0306;
+            box-shadow: 12px -3px 23px 2px #1c0306;
             border-color: rgba(245, 245, 245, 0.199);
         }
     </style>
@@ -135,7 +185,7 @@
                     <p>
                         <label for="username" class="uname" data-icon="u"> Your name </label>
                         <!-- <span></span>
-                <span class = "favicon"></span> -->
+                        <span class = "favicon"></span> -->
                         <input id="username" name="username" required="required" type="text" placeholder="Your name" />
                     </p>
                     <p>
@@ -164,21 +214,21 @@
                         <span class="checkmark"></span>
                     </label>
                     <p>Please choose your favorite drink</p>
-                    <label class="container"> No alcohol
+                    <label class="container1"> No alcohol
                         <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+                        <span class="checkmark1"></span>
                     </label>
-                    <label class="container"> Wine
+                    <label class="container1"> Wine
                         <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+                        <span class="checkmark1"></span>
                     </label>
-                    <label class="container"> Beer
+                    <label class="container1"> Beer
                         <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+                        <span class="checkmark1"></span>
                     </label>
-                    <label class="container"> Whiskey
+                    <label class="container1"> Whiskey
                         <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+                        <span class="checkmark1"></span>
                     </label>
                     <input type="submit" value="Submit">
                 </form>
@@ -186,5 +236,4 @@
         </div>
     </section>
 </body>
-
 </html>
