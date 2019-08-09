@@ -9,7 +9,7 @@
         body {
             width: 100%;
             height: auto;
-            background-attachment: scroll
+            background-attachment: scroll;
         }
 
         section {
@@ -18,7 +18,7 @@
             margin-top: 5%;
             margin-left: 12%;
             float: center;
-            background-image: url("https://cdn.pixabay.com/photo/2014/09/18/10/38/fence-450670_960_720.jpg");
+            background-image: url("p1.jpg");
             background-color: lightblue;
             background-repeat: no-repeat;
             background-size: cover
@@ -28,13 +28,16 @@
             padding-top: 2vw;
             margin-left: 40%;
             padding-bottom: 2vw;
-            float: center
+            float: center;
         }
 
-        i#fab, i#twit, i#globe, i#linked{
+        i#fab,
+        i#twit,
+        i#globe,
+        i#linked {
             background-color: white;
             border-radius: 50%;
-            border: 1x solid white;
+            border: 1px solid white;
             padding: 1vw;
         }
 
@@ -55,27 +58,30 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            float: left
+            float: left;
+            height: 5.8vw;
+            width: auto
         }
 
-        /* img .flex {
-            float: left;
-            padding-right: 40
-        } */
         .items {
             list-style-type: none;
             background-color: white;
             margin: 0;
-            padding: 0;
             overflow: hidden;
             float: center;
-            text-transform: uppercase
+            height: 5.8vw;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.5vw
         }
+
         li {
-            float: right
+            float: right;
+            line-height: 3vw
         }
+
         li a {
-            display: block;
+            display: inline-block;
             padding: 1vw;
             color: black;
             text-align: center;
@@ -85,13 +91,14 @@
         }
 
         li a:hover {
-            color: red
+            color: red;
+            border-top: 1px solid red
         }
 
         button {
             width: auto;
             height: 4vw;
-            margin-left: 40%;
+            margin-left: 41.5%;
             margin-bottom: 3vw;
             background-color: rgb(237, 82, 64);
             text-align: center;
@@ -104,7 +111,8 @@
             text-align: center;
             color: black;
             text-decoration: underline;
-            padding-top: 3vw
+            padding-top: 3vw;
+            font-size: 2vw
         }
 
         @media only screen and (max-width: 1000px) {
@@ -112,7 +120,25 @@
                 display: none
             }
         }
-        i#code, i#plane, i#hotel, i#flask{
+        /* @media only screen and (max-width: 100px) {
+            #fab {
+                display: block;
+            }
+            #twit {
+                display: block;
+            }
+            #globe {
+                display: none;
+            }
+            #linked {
+                display: none;
+            }
+        } */
+
+        i#code,
+        i#plane,
+        i#hotel,
+        i#flask {
             color: white;
             float: center;
             position: relative;
@@ -120,58 +146,70 @@
             transform: translateY(-50%);
             margin-left: 48%
         }
+
+        .images {
+            width: 40%;
+            display: inline-block;
+            position: relative;
+            float: center;
+            margin-left: 32%
+        }
     </style>
 </head>
 
 <body>
     <section>
         <div class="favicon">
-            <i class="fab fa-facebook-f" id = "fab"></i>
-            <i class="fab fa-twitter" id = "twit"></i>
-            <i class="far fa-globe" id = "globe"></i>
-            <i class="fab fa-linkedin-in" id = "linked"></i>
+            <i class="fab fa-facebook-f" id="fab"></i>
+            <i class="fab fa-twitter" id="twit"></i>
+            <i class="far fa-globe" id="globe"></i>
+            <i class="fab fa-linkedin-in" id="linked"></i>
         </div>
         <ul class="menu">
             <li class="flex"><a href=#home>FLEX</a></li>
-            <li><img src="logo.png" alt="flex logo"></li>
+            <li><img src="logo.png" alt="flex logo" style="width: 5.8vw"></li>
         </ul>
-        <ul class = "items">
+        <ul class="items">
             <li><a href=#services>Contact</a></li>
             <li><a href=#services>External</a></li>
             <li><a href=#services>Team</a></li>
             <li><a href=#services>Portfolio</a></li>
             <li><a href=#services>Services</a></li>
-            <li><a href=#home>Home</a></li>          
+            <li><a href=#home>Home</a></li>
         </ul>
-
-
         <h1 class="text-underline">DIGITAL STUDIO</h1>
-        <p style="text-align: center; color: white">LET US DESIGN YOUR WEBSITE</p>
+        <p style="text-align: center; color: white; font-size: 1vw">LET US DESIGN YOUR WEBSITE</p>
         <button>RESPONSIVE TEMPLATE</button>
     </section>
     <h2>OUR SERVICES</h2>
-    <p style="text-align: center">LET US HELP YOU TO CREATE PROFESSIONAL WEBSITES</p>
+    <p style="text-align: center; font-size: 1vw">LET US HELP YOU TO CREATE PROFESSIONAL WEBSITES</p>
     <div class="block-design">
-        <div
-            style="background-color:  #1abc9c; display:inline-block; width: 16%; height: 16vw; margin-left: 15%; float: center;">
-            <i class="far fa-file-code" id = "code"></i>
+        <div style="background-color:  #1abc9c; display:inline-block; width: 16%; height: 16vw; margin-left: 15%; float: center;">
+            <i class="far fa-file-code" id="code"></i>
         </div>
-        <div
-            style="background-color: #e67e22; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
-            <i class="far fa-paper-plane" id = "plane"></i>
+        <div style="background-color: #e67e22; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="far fa-paper-plane" id="plane"></i>
         </div>
-        <div
-            style="background-color: #3498db; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
-            <i class="fas fa-hotel" id = "hotel"></i>
+        <div style="background-color: #3498db; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="fas fa-hotel" id="hotel"></i>
         </div>
-        <div
-            style="background-color: #2ecc71; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
-            <i class="fas fa-flask" id = "flask"></i>
+        <div style="background-color: #2ecc71; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="fas fa-flask" id="flask"></i>
         </div>
     </div>
     <h2>OUR PORTFOLIO</h2>
-    <p style="text-align: center">WHAT WE HAVE DONE SO FAR</p>
-    <img src="\Img\img2.jpg">
+    <p style="text-align: center; font-size: 1vw">WHAT WE HAVE DONE SO FAR</p>
+    <div class="images">
+        <img src="p1.jpg" class = "image1" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p2.jpg" class = "image2" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p3.jpg" class = "image3" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p4.jpg" class = "image4" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p5.jpg" class = "image5" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p6.jpg" class = "image6" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p7.jpg" class = "image7" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p8.jpg" class = "image8" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+    </div>
+
 </body>
 
 </html>
