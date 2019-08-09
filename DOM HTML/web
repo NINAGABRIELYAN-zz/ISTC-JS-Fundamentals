@@ -31,7 +31,7 @@
             float: center
         }
 
-        i {
+        i#fab, i#twit, i#globe, i#linked{
             background-color: white;
             border-radius: 50%;
             border: 1x solid white;
@@ -112,16 +112,24 @@
                 display: none
             }
         }
+        i#code, i#plane, i#hotel, i#flask{
+            color: white;
+            float: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 48%
+        }
     </style>
 </head>
 
 <body>
     <section>
         <div class="favicon">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="far fa-globe"></i>
-            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-facebook-f" id = "fab"></i>
+            <i class="fab fa-twitter" id = "twit"></i>
+            <i class="far fa-globe" id = "globe"></i>
+            <i class="fab fa-linkedin-in" id = "linked"></i>
         </div>
         <ul class="menu">
             <li class="flex"><a href=#home>FLEX</a></li>
@@ -146,20 +154,24 @@
     <div class="block-design">
         <div
             style="background-color:  #1abc9c; display:inline-block; width: 16%; height: 16vw; margin-left: 15%; float: center;">
+            <i class="far fa-file-code" id = "code"></i>
         </div>
         <div
             style="background-color: #e67e22; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="far fa-paper-plane" id = "plane"></i>
         </div>
         <div
             style="background-color: #3498db; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="fas fa-hotel" id = "hotel"></i>
         </div>
         <div
             style="background-color: #2ecc71; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="fas fa-flask" id = "flask"></i>
         </div>
     </div>
     <h2>OUR PORTFOLIO</h2>
     <p style="text-align: center">WHAT WE HAVE DONE SO FAR</p>
-    <img src="img2.jpg">
+    <img src="\Img\img2.jpg">
 </body>
 
 </html>
