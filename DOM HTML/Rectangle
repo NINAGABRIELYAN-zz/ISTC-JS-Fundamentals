@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0.5%;
+            display: inline-block;
+            position: relative;
+            box-sizing: border-box;
+            font-family: 'Courier New';
+            text-align: center;
+            font-size: 2vw;
+            width: 10%;
+            height: 10vw;
+            float: left;
+            background-color: rgba(9, 8, 107, 0.555);
+            box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div>Blah-Blah-Blah-Blah</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </header>
+
+</body>
+
+</html>
