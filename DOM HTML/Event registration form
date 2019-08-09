@@ -1,248 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Event registration form</title>
+    <title>FLEX DESIGN TEMPLATE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
-        body, html {
-            margin: 0%;
+        body {
             width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-image: url("http://static.hdw.eweb4.com/media/wallpapers_1920x1080/photography/1/4/wine-glasses-photography-hd-wallpaper-1920x1080-39505.jpg");
-            background-color: black;
-            /* background-repeat: no-repeat;
-            background-size: cover;
-            max-height: 100%;
-            max-width: 100%; */
-        }
-        h1 {
-            margin-bottom: 2%;
-            padding-top: 0.5vw;
-            padding-bottom: 0.25vw;
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-transform: uppercase;
-            color: whitesmoke;
-            text-shadow: 4px 4px rgb(80, 5, 5)
-        }
-        fieldset.event {
-            margin: 30vw;
-            width: 40%;
-            margin-top: 1.5vw;
             height: auto;
-            display: border-box;
-            position: absolute;
-            background-color: rgba(226, 186, 186, 0.226);
-            border: 2px solid;
-            border-radius: 5px;
-            border-color: rgba(158, 113, 113, 0.507);
+            background-attachment: scroll;
         }
-        .container {
-            display: block;
-            position: relative;
-            padding-left: 2.5vw;
-            margin-bottom: 1.25vw;
-            cursor: pointer;
-            font-size: 1.5vw;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            color: whitesmoke;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        section {
+            width: 76%;
+            height: auto;
+            margin-top: 5%;
+            margin-left: 12%;
+            float: center;
+            background-image: url("p1.jpg");
+            background-color: lightblue;
+            background-repeat: no-repeat;
+            background-size: cover
         }
-        .container input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
+
+        .favicon {
+            padding-top: 2vw;
+            margin-left: 40%;
+            padding-bottom: 2vw;
+            float: center;
         }
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 1.5vw;
-            width: 1.5vw;
-            background-color: whitesmoke;
+
+        i#fab,
+        i#twit,
+        i#globe,
+        i#linked {
+            background-color: white;
             border-radius: 50%;
+            border: 1px solid white;
+            padding: 1vw;
         }
-        .container:hover input~.checkmark {
-            background-color: silver;
+
+        .text-underline {
+            display: inline-block;
+            padding-top: 8vw;
+            font-family: "Open Sans", Arial, sans-serif;
+            color: white;
+            font-size: 2vw;
+            margin-left: 40%;
+            border-bottom: 1px solid white;
+            padding-bottom: 7px;
         }
-        .container input:checked~.checkmark {
-            background-color:rgb(53, 7, 7);
+
+        .menu {
+            list-style-type: none;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+            height: 5.8vw;
+            width: auto
         }
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
+
+        .items {
+            list-style-type: none;
+            background-color: white;
+            margin: 0;
+            overflow: hidden;
+            float: center;
+            width: 60%;
+            height: 5.8vw;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.5vw
         }
-        .container input:checked~.checkmark:after {
-            display: block;
-        }
-        .container .checkmark:after {
-            top: 0.4vw;
-            left: 0.4vw;
-            width: 0.6vw;
-            height: 0.6vw;
-            border-radius: 50%;
-            background:rgb(53, 7, 7);
-        }
-        .container1 {
-            display: block;
-            position: relative;
-            padding-left: 2.5vw;
-            margin-bottom: 1.25vw;
-            cursor: pointer;
-            font-size: 1vw;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            color: whitesmoke;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        .container1 input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-        }
-        .checkmark1 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 1.5vw;
-            width: 1.5vw;
-            background-color: whitesmoke;
-            border-radius: 50%;
-        }
-        .container1:hover input~.checkmark1 {
-            background-color: silver;
-        }
-        .container1 input:checked~.checkmark1 {
-            background-color:rgb(53, 7, 7);
-        }
-        .checkmark1:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-        .container1 input:checked~.checkmark1:after {
-            display: block;
-        }
-        .container1 .checkmark1:after {
-            top: 0.4vw;
-            left: 0.4vw;
-            width: 0.6vw;
-            height: 0.6vw;
-            border-radius: 50%;
-            background:rgb(53, 7, 7);
-        }
-        /* .favicon::before{
-            content: "*"
-        } */
-        p {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 1.5vw;
-            color: whitesmoke;
-            text-align: justify;
-        }
-        input {
-            width: 22vw;
-            line-height: 2vw;
+
+        li {
             float: right;
-            background-color: transparent;
-            border-color: rgba(245, 245, 245, 0.199);
-            border-radius: 5px;
-            color: whitesmoke
+            line-height: 3vw
         }
-        input:focus {
-            outline-color: silver;
-        }
-        ::placeholder{
-            color: whitesmoke;
-        }
-        button{
-            float: right;
-            background-color:  rgba(104, 7, 7, 0.863);
-            box-shadow: 12px -3px 23px 2px #1c0306;
-            border-color: rgba(245, 245, 245, 0.199);
-            border-radius: 7px;
-            font-family: 'Times New Roman', Times, serif;
+
+        li a {
+            display: inline-block;
+            padding: 1vw;
+            color: black;
+            text-align: center;
             font-size: 1.5vw;
-            text-transform: uppercase
+            text-decoration: none;
+            border-color: black
         }
-        @media only screen and (max-width: 1000px){
-            h1{
+
+        li a:hover {
+            color: red;
+            border-top: 1px solid red
+        }
+
+        button {
+            width: auto;
+            height: 4vw;
+            margin-left: 41.5%;
+            margin-bottom: 3vw;
+            background-color: rgb(237, 82, 64);
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            font-size: 1vw
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            text-decoration: underline;
+            padding-top: 3vw;
+            font-size: 2vw
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .block-design {
+                display: none
+            }
+        }
+
+        /* @media only screen and (max-width: 100px) {
+            #fab {
+                display: block;
+            }
+            #twit {
+                display: block;
+            }
+            #globe {
                 display: none;
             }
+            #linked {
+                display: none;
+            }
+        } */
+
+        i#code,
+        i#plane,
+        i#hotel,
+        i#flask {
+            color: white;
+            float: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 48%
+        }
+
+        .images {
+            width: 40%;
+            display: inline-block;
+            position: relative;
+            float: center;
+            margin-left: 32%
+        }
+        .nav-bar{
+            float: center;
+            display: inline-block;
+            margin-left: 15%
         }
     </style>
 </head>
 
 <body>
-    <h1>
-        event registration form
-    </h1>
     <section>
-        <div id="container_my">
-            <fieldset class="event">
-                <form action="mysuperscript.php" autocomplete="on">
-                    <p>
-                        <label for="username" class="uname" data-icon="u"> Your name </label>
-                        <!-- <span></span>
-                        <span class = "favicon"></span> -->
-                        <input id="username" name="username" required="required" type="text" placeholder="Your name" />
-                    </p>
-                    <p>
-                        <label for="username" class="uname" data-icon="u"> Your e-mail </label>
-                        <input id="username" name="username" required="required" type="text" placeholder="Your e-mail" />
-                    </p>
-                    <p>
-                        <label for="username" class="uname" data-icon="u"> Phone number </label>
-                        <input id="username" name="username" required="required" type="text" placeholder="Phone number" />
-                    </p>
-                    <p>
-                        <label for="username" class="uname" data-icon="u"> Number of persons</label>
-                        <input id="username" name="username" required="required" type="text" placeholder="Number of persons" />
-                    </p>
-                    <p>
-                        <label for="username" class="uname" data-icon="u">Date and Time</label>
-                        <input type="datetime-local" name="daytime">
-                    </p>
-                    <p>Please choose your favorite food</p>
-                    <label class="container"> Vegan
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container"> No vegan
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <p>Please choose your favorite drink</p>
-                    <label class="container1"> No alcohol
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark1"></span>
-                    </label>
-                    <label class="container1"> Wine
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark1"></span>
-                    </label>
-                    <label class="container1"> Beer
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark1"></span>
-                    </label>
-                    <label class="container1"> Whiskey
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark1"></span>
-                    </label>
-                    <button>submit</button>
-                </form>
-            </fieldset>
+        <div class="favicon">
+            <i class="fab fa-facebook-f" id="fab"></i>
+            <i class="fab fa-twitter" id="twit"></i>
+            <i class="far fa-globe" id="globe"></i>
+            <i class="fab fa-linkedin-in" id="linked"></i>
         </div>
+        <div class = "nav-bar">
+            <ul class="menu">
+                <li class="flex"><a href=#home>FLEX</a></li>
+                <li><img src="logo.png" alt="flex logo" style="width: 5.8vw"></li>
+            </ul>
+            <ul class="items">
+                <li><a href=#services>Contact</a></li>
+                <li><a href=#services>External</a></li>
+                <li><a href=#services>Team</a></li>
+                <li><a href=#services>Portfolio</a></li>
+                <li><a href=#services>Services</a></li>
+                <li><a href=#home>Home</a></li>
+            </ul>
+        </div>
+        <h1 class="text-underline">DIGITAL STUDIO</h1>
+        <p style="text-align: center; color: white; font-size: 1vw">LET US DESIGN YOUR WEBSITE</p>
+        <button>RESPONSIVE TEMPLATE</button>
     </section>
+    <h2>OUR SERVICES</h2>
+    <p style="text-align: center; font-size: 1vw">LET US HELP YOU TO CREATE PROFESSIONAL WEBSITES</p>
+    <div class="block-design">
+        <div style="background-color:  #1abc9c; display:inline-block; width: 16%; height: 16vw; margin-left: 15%; float: center;">
+            <i class="far fa-file-code" id="code"></i>
+        </div>
+        <div style="background-color: #e67e22; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="far fa-paper-plane" id="plane"></i>
+        </div>
+        <div style="background-color: #3498db; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="fas fa-hotel" id="hotel"></i>
+        </div>
+        <div style="background-color: #2ecc71; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+            <i class="fas fa-flask" id="flask"></i>
+        </div>
+    </div>
+    <h2>OUR PORTFOLIO</h2>
+    <p style="text-align: center; font-size: 1vw">WHAT WE HAVE DONE SO FAR</p>
+    <div class="images">
+        <img src="p1.jpg" class="image1" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p2.jpg" class="image2" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p3.jpg" class="image3" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p4.jpg" class="image4" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p5.jpg" class="image5" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p6.jpg" class="image6" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p7.jpg" class="image7" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p8.jpg" class="image8" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+    </div>
+
 </body>
+
 </html>
