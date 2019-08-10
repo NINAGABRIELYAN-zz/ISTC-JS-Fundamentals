@@ -120,21 +120,23 @@
                 display: none
             }
         }
-        /* @media only screen and (max-width: 100px) {
-            #fab {
-                display: block;
-            }
-            #twit {
-                display: block;
-            }
-            #globe {
+
+        @media only screen and (max-width: 1000px) {
+            .items {
                 display: none;
             }
-            #linked {
+        }
+
+        /* @media only screen and (min-width: 600px) {
+            .menu {
                 display: none;
+            }
+        }
+        @media only screen and (max-width: 1000px) {
+            .menu {
+                display: block;
             }
         } */
-
         i#code,
         i#plane,
         i#hotel,
@@ -154,6 +156,134 @@
             float: center;
             margin-left: 32%
         }
+
+        #divaa1 {
+            position: absolute;
+            float: left;
+            height: auto;
+            border: 1px solid lightblue;
+            border-radius: 5%;
+            background: rgb(237, 82, 64);
+        }
+
+        #divaa1:hover {
+            height: 200px;
+        }
+
+        #btna1 {
+            position: absolute;
+            float: left;
+            top: 0px;
+            background: transparent;
+            width: auto;
+            color: transparent;
+            padding-top: 0;
+            padding-bottom: 0.25vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5vw;
+            border: none;
+            cursor: pointer;
+        }
+
+        #divaa1:hover>#btna1 {
+            top: 8vw;
+            left: 0;
+            color: white;
+            background: transparent;
+            padding-bottom: 1vw;
+        }
+
+        #btna2 {
+            position: absolute;
+            float: left;
+            top: 0px;
+            background: transparent;
+            width: auto;
+            color: transparent;
+            padding-top: 0;
+            padding-bottom: 0.25vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5vw;
+            border: none;
+            cursor: pointer;
+        }
+
+        #divaa1:hover>#btna2 {
+            top: 14vw;
+            left: 0;
+            color: white;
+            background: transparent;
+            padding-bottom: 1vw;
+        }
+
+        #btna3 {
+            position: absolute;
+            float: left;
+            top: 0px;
+            background: transparent;
+            width: auto;
+            color: transparent;
+            padding-top: 0;
+            padding-bottom: 0.25vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5vw;
+            border: none;
+            cursor: pointer;
+        }
+
+        #divaa1:hover>#btna3 {
+            top: 20vw;
+            left: 0;
+            color: white;
+            background: transparent;
+            padding-bottom: 1vw;
+        }
+
+        #btna4 {
+            position: absolute;
+            float: left;
+            top: 0px;
+            background: transparent;
+            width: auto;
+            color: transparent;
+            padding-top: 0;
+            padding-bottom: 0.25vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5vw;
+            border: none;
+            cursor: pointer;
+        }
+
+        #divaa1:hover>#btna4 {
+            top: 26vw;
+            left: 0;
+            color: white;
+            background: transparent;
+            padding-bottom: 1vw;
+        }
+
+        #btna5 {
+            position: absolute;
+            float: left;
+            top: 0px;
+            background: transparent;
+            width: auto;
+            color: transparent;
+            padding-top: 0;
+            padding-bottom: 0.25vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5vw;
+            border: none;
+            cursor: pointer;
+        }
+
+        #divaa1:hover>#btna5 {
+            top: 32vw;
+            left: 0;
+            color: white;
+            background: transparent;
+            padding-bottom: 1vw;
+        }
     </style>
 </head>
 
@@ -165,11 +295,17 @@
             <i class="far fa-globe" id="globe"></i>
             <i class="fab fa-linkedin-in" id="linked"></i>
         </div>
-        <ul class="menu">
-            <li class="flex"><a href=#home>FLEX</a></li>
-            <li><img src="logo.png" alt="flex logo" style="width: 5.8vw"></li>
-        </ul>
+        <div class="menu">
+            <div id="divaa1"><img src="logo.png" alt="flex logo" style="width: 5.8vw">
+                <input id="btna1" type="button" value="Home">
+                <input id="btna2" type="button" value="Services">
+                <input id="btna3" type="button" value="Portfolio">
+                <input id="btna4" type="button" value="External">
+                <input id="btna5" type="button" value="Contact">
+            </div>
+        </div>
         <ul class="items">
+            <li class="flex"><a href=#home>FLEX</a></li>
             <li><a href=#services>Contact</a></li>
             <li><a href=#services>External</a></li>
             <li><a href=#services>Team</a></li>
@@ -184,32 +320,56 @@
     <h2>OUR SERVICES</h2>
     <p style="text-align: center; font-size: 1vw">LET US HELP YOU TO CREATE PROFESSIONAL WEBSITES</p>
     <div class="block-design">
-        <div style="background-color:  #1abc9c; display:inline-block; width: 16%; height: 16vw; margin-left: 15%; float: center;">
+        <div
+            style="background-color:  #1abc9c; display:inline-block; width: 16%; height: 16vw; margin-left: 15%; float: center;">
             <i class="far fa-file-code" id="code"></i>
         </div>
-        <div style="background-color: #e67e22; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+        <div
+            style="background-color: #e67e22; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
             <i class="far fa-paper-plane" id="plane"></i>
         </div>
-        <div style="background-color: #3498db; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+        <div
+            style="background-color: #3498db; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
             <i class="fas fa-hotel" id="hotel"></i>
         </div>
-        <div style="background-color: #2ecc71; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
+        <div
+            style="background-color: #2ecc71; display:inline-block; width: 16%; height: 16vw; margin-left: 1%; float: center;">
             <i class="fas fa-flask" id="flask"></i>
         </div>
     </div>
     <h2>OUR PORTFOLIO</h2>
     <p style="text-align: center; font-size: 1vw">WHAT WE HAVE DONE SO FAR</p>
     <div class="images">
-        <img src="p1.jpg" class = "image1" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
-        <img src="p2.jpg" class = "image2" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
-        <img src="p3.jpg" class = "image3" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
-        <img src="p4.jpg" class = "image4" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
-        <img src="p5.jpg" class = "image5" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
-        <img src="p6.jpg" class = "image6" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
-        <img src="p7.jpg" class = "image7" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
-        <img src="p8.jpg" class = "image8" style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p1.jpg" class="image1"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p2.jpg" class="image2"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p3.jpg" class="image3"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p4.jpg" class="image4"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p5.jpg" class="image5"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p6.jpg" class="image6"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p7.jpg" class="image7"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
+        <img src="p8.jpg" class="image8"
+            style="display:inline-block; width: 8vw; height: 8vw; margin-left: 1%; float: center">
     </div>
-
+    <script>
+        var x = document.getElementsByClassName("items")
+        var y = document.getElementById("divaa1")
+        function myFunction() {
+            if (x.style.display == none) {
+                y.style.display == block;
+            } else if(x.style.display !== none){
+                y.style.display == none;
+            } else {
+                x.style.display == block
+            }
+        };
+    </script>
 </body>
 
 </html>
