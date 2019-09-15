@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" placeholder="Type something..." id="myInput">
+        <button type="button" onclick="getValue();">Get Value</button>
+        <p id="my_prime"></p>
+        <script>
+            function getValue(){
+                // Selecting the input element and get its value 
+                var num = parseInt(document.getElementById("myInput").value);
+                if (num == 1 || num%2==0 && num!=2)
+                {document.getElementById("my_prime").innerHTML= "not prime"; return null}
+                for (i = 3; i < num; i+=2){
+                if (num%i==0) {document.getElementById("my_prime").innerHTML= "not prime"; return null}
+                } document.getElementById("my_prime").innerHTML= "prime"; return null
+            }
+        </script>
+    </body>
+</html>
