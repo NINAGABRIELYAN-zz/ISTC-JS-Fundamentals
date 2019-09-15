@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="todolist.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <h2>To Do List</h2>
+            <input type="text" , id="myinput" , placeholder="Add what to do..." , onkeydown="if (event.keyCode == 13) Do(document.getElementById('myinput').value)
+            " />
+            <span onclick="Do(document.getElementById('myinput').value)"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="todolist" style="max-height:350px;overflow:auto;">
+            <ul id="todo_Ul">
+            </ul>
+        </div>
+    </div>
+    <div class="doneList">
+        <h2>Done List</h2>
+        <ul id="done_Ul" style="max-height:350px; overflow:auto;">
+        </ul>
+    </div>
+    <script>
+        function Do(todo) {
+            var newNode = document.createElement('li');
+            newNode.className = 'text';
+            newNode.innerHTML = todo;
+            document.getElementById('todo_Ul').appendChild(newNode);
+
+            newNode.onclick = function () {
+                var done = document.createElement('li');
+                done.innerHTML = todo.strike();
+                document.getElementById('done_Ul').appendChild(done)
+                document.getElementById('todo_Ul').removeChild(newNode);
+
+                done.onclick = function () {
+                    document.getElementById('done_Ul').removeChild(done)
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
