@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            margin-top: 2%
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="Type country name" id="c1"><br>
+    <input type="text" placeholder="Type country name" id="c2"><br>
+    <input type="text" placeholder="Type country name" id="c3"><br>
+    <input type="text" placeholder="Type country name" id="c4"><br>
+    <button type="button" onclick="longestCountry(
+    document.getElementById('c1').value,
+    document.getElementById('c2').value,
+    document.getElementById('c3').value,
+    document.getElementById('c4').value
+    );">Get the longest name</button>
+    <p id="my_country"></p>
+</body>
+<script>
+    function longestCountry(country_1, country_2, country_3, country_4) {
+        var countries = "";
+        for (var i = 0; i < arguments.length; i++) {
+            if (arguments[i].length > countries.length) {
+                countries = arguments[i];
+            }
+        }
+        document.getElementById("my_country").innerHTML = "The longest name is " + countries; return null;
+    }
+</script>
+
+</html>
