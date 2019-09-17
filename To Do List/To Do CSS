@@ -76,3 +76,6 @@ ul{
     font-size: 1.5vw;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
+li:hover{
+    color: grey
+}
